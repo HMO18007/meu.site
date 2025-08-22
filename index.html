@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #dd3b8c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #e21ca0;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        #sobre {
+            text-align: center;
+        }
+        #sobre img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        #projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .projeto {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .projeto:hover {
+            transform: scale(1.05);
+        }
+        .projeto img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        form button {
+            padding: 10px;
+            background: #db6291;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #bd3584;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Meu Portfólio</h1>
+        <p>Desenvolvedora Web | Criadora de Experiências Digitais</p>
+    </header>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section id="sobre">
+        <img src="c:\Users\hillory\OneDrive\Pictures\Camera Roll\a2504483325a7d49315ce8f4cc1614e7_0.jpeg" alt="Foto de perfil">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Meu nome é Hillory, sou desenvolvedora web iniciante apaixonada por criar interfaces bonitas e funcionais. Estou sempre aprendendo novas tecnologias para transformar ideias em realidade.</p>
+    </section>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projeto">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 1">
+            <h3>Projeto 1</h3>
+            <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+        </div>
+        <div class="projeto">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 2">
+            <h3>Projeto 2</h3>
+            <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+        </div>
+        <div class="projeto">
+            <img src="https://via.placeholder.com/400x200" alt="Projeto 3">
+            <h3>Projeto 3</h3>
+            <p>Descrição breve do projeto, tecnologias usadas e objetivo.</p>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form action="mailto:hilloryoli@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 - Hillory. Todos os direitos reservados.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
+<link rel="icon" type="c:\Users\hillory\Downloads\ChatGPT Image 6 de ago. de 2025, 17_33_32.png" href="images/favicon.png">
