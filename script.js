@@ -1,19 +1,17 @@
-// ===== MENU RESPONSIVO =====
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.querySelector("nav");
 
+// ===== MENU RESPONSIVO =====
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector("nav");
     const menuBtn = document.createElement("button");
     menuBtn.textContent = "☰ Menu";
-    menuBtn.classList.add("menu-btn");
-
-    // Insere o botão antes do nav
+    menuBtn.className = "menu-btn";
     nav.parentNode.insertBefore(menuBtn, nav);
 
     menuBtn.addEventListener("click", () => {
         nav.classList.toggle("ativo");
     });
 
-    function verificarTamanho() {
+    function resize() {
         if (window.innerWidth <= 768) {
             menuBtn.style.display = "block";
             nav.classList.remove("ativo");
@@ -23,14 +21,68 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    verificarTamanho();
-    window.addEventListener("resize", verificarTamanho);
+    resize();
+    window.addEventListener("resize", resize);
 });
 
-// ===== ROLAGEM SUAVE =====
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-        const id = this.getAttribute("href");
-        d
+// ===== TEXTO DIGITANDO =====
+const texto = [
+    "Desenvolvedora Web 💻",
+    "Criadora de experiências digitais ✨",
+    "Apaixonada por tecnologia 🎀"
+];
 
+let i = 0, j = 0;
+const elemento = document.getElementById("digitando");
+
+function digitar() {
+    if (j < texto[i].length) {
+        elemento.textContent += texto[i].charAt(j);
+        j++;
+        setTimeout(digitar, 100);
+    } else {
+        setTimeout(apagar, 2000);
+    }
+}
+
+function apagar() {
+    if (j > 0) {
+        elemento.textContent = texto[i].substring(0, j - 1);
+        j--;
+        setTimeout(apagar, 50);
+    } else {
+        i = (i + 1) % texto.length;
+        setTimeout(digitar, 500);
+    }
+}
+
+digitar();
+
+// ===== ANIMAÇÃO PROJETOS =====
+const projetos = document.querySelectorAll(".projeto");
+
+function animar() {
+    projetos.forEach(p => {
+        const pos = p.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) {
+            p.classList.add("visivel");
+        }
+    });
+}
+
+window.addEventListener("scroll", animar);
+animar();
+
+// ===== DARK MODE =====
+const darkBtn = document.getElementById("darkToggle");
+darkBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});
+
+// ===== FORMULÁRIO =====
+const form = document.querySelector("form");
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("Mensagem enviada com sucesso 💖");
+    form.reset();
+});
