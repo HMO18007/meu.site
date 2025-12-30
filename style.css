@@ -1,37 +1,43 @@
-/* BOTÃO MENU */
-.menu-btn {
-    background: #e24a9e;
+/* ===== LOGO ===== */
+.logo {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+/* ===== TEXTO DIGITANDO ===== */
+#digitando {
+    font-size: 1.2rem;
+    color: #ffe1f0;
+}
+
+/* ===== DARK MODE ===== */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+}
+
+.dark-mode header {
+    background: #b0286f;
+}
+
+.dark-mode nav {
+    background: #111;
+}
+
+.dark-mode .projeto {
+    background: #2b2b2b;
+}
+
+/* ===== BOTÃO DARK MODE ===== */
+.dark-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #dd3b8c;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 1.2rem;
+    padding: 12px;
+    border-radius: 50%;
     cursor: pointer;
-    display: none;
-    margin: 10px auto;
-    border-radius: 8px;
-}
-
-/* MENU MOBILE */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav.ativo {
-        display: flex;
-    }
-}
-
-/* ANIMAÇÃO DOS PROJETOS */
-.projeto {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-
-.projeto.visivel {
-    opacity: 1;
-    transform: translateY(0);
+    font-size: 1.2rem;
 }
