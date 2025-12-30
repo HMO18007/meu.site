@@ -1,4 +1,80 @@
-/* ===== LOGO ===== */
+
+        #sobre {
+            text-align: center;
+        }
+
+        #sobre img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid #dd3b8c;
+        }
+
+        /* PROJETOS */
+        #projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .projeto {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .projeto:hover {
+            transform: scale(1.05);
+        }
+
+        .projeto img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* CONTATO */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        form button {
+            padding: 12px;
+            background: #db6291;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #bd3584;
+        }
+
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>= */
 .logo {
     font-size: 2.8rem;
     font-weight: bold;
