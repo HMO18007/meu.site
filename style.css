@@ -1,0 +1,37 @@
+/* BOTÃO MENU */
+.menu-btn {
+    background: #e24a9e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+/* MENU MOBILE */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav.ativo {
+        display: flex;
+    }
+}
+
+/* ANIMAÇÃO DOS PROJETOS */
+.projeto {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.projeto.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
